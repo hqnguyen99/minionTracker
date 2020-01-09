@@ -1,14 +1,20 @@
 public class Minion {
-    private string name;
+    private String name;
     private double height;
-    private int numberOfEvilDeedCompleted;
+    private int numberOfEvilDeedCompleted = 0;
 
-    public Minion(string name, double height, int numberOfEvilDeedCompleted) {
+    public Minion(String name, double height) {
         this.name = name;
         this.height = height;
-        this.numberOfEvilDeedCompleted = numberOfEvilDeedCompleted;
     }
-
+    public void incrementNumberOfDevilDeed(){
+        this.numberOfEvilDeedCompleted ++;
+    }
+    public String minionInfor() {
+        return name + ", " +
+                height + ", " +
+                numberOfEvilDeedCompleted + "evil deed(s)";
+    }
     @Override
     public String toString() {
         return "Minion{" +
