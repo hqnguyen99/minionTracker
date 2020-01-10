@@ -1,4 +1,4 @@
-import java.sql.SQLOutput;
+
 import java.util.Scanner;
 
 public class Menu {
@@ -22,6 +22,7 @@ public class Menu {
         // Show menu
         printStarBorder("*" + title + "*");
         System.out.println("*" + title + "*");
+        printStarBorder("*" + title + "*");
         for (int i = 0; i < menuOptions.length; i++) {
             int optionIndex = i + 1;
             System.out.println(optionIndex + ". " + menuOptions[i]);
@@ -45,6 +46,7 @@ public class Menu {
         String minionName = in.nextLine();
         System.out.println("Enter minion's height: ");
         Double minionHeight = in.nextDouble();
+        in.nextLine();
         manager.add(new Minion(minionName,minionHeight ));
     }
 
@@ -52,6 +54,7 @@ public class Menu {
         listMinion();
         System.out.println("Enter 0 to cancel");
         int selectMinionToRemove = in.nextInt();
+        in.nextLine();
         if (selectMinionToRemove != 0){
             manager.remove(selectMinionToRemove);
         }
@@ -60,6 +63,7 @@ public class Menu {
         listMinion();
         System.out.println("Enter 0 to cancel");
         int selectMinionToAttribute = in.nextInt();
+        in.nextLine();
         if (selectMinionToAttribute != 0){
             manager.attributeAnEvilDeed(selectMinionToAttribute);
         }
