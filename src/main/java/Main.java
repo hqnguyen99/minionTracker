@@ -1,10 +1,10 @@
 import java.util.*;
 public class Main {
     public static void main(String[] args){
-        Menu menuUI = new Menu();
+        final Menu menuUI = new Menu();
         Scanner in = new Scanner(System.in);
 
-        // Show welcome greeting to program
+        // Show greeting to program
         menuUI.showWelcomeLine();
         //Run menu options
         boolean isDone = false;
@@ -12,27 +12,33 @@ public class Main {
             menuUI.showMenu();
             int choice = in.nextInt();
             switch(choice) {
-                case (1):
+                case 1 :
+                    in.nextLine();
                     menuUI.listMinion();
                     break;
 
-                case(2):
+                case 2 :
+                    in.nextLine();
                     menuUI.addMinion();
                     break;
 
-                case (3):
+                case 3 :
+                    in.nextLine();
                     menuUI.removeMinion();
                     break;
 
-                case (4):
+                case 4 :
+                    in.nextLine();
                     menuUI.attributeAnDevilDeed();
                     break;
 
-                case(5):
+                case 5 :
+                    in.nextLine();
                     menuUI.debugDumpOfMinionDetails();
                     break;
 
-                case(6):
+                case 6 :
+                    in.nextLine();
                     isDone = true;
                     break;
             }
