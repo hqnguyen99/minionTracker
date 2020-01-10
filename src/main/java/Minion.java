@@ -13,7 +13,7 @@ public class Minion {
     public String minionInfor() {
         return name + ", " +
                 height + ", " +
-                numberOfEvilDeedCompleted + "evil deed(s)";
+                numberOfEvilDeedCompleted + " evil deed(s)";
     }
     @Override
     public String toString() {
