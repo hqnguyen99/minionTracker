@@ -69,6 +69,7 @@ public class Menu {
         }
     }
     public void debugDumpOfMinionDetails(){
+        System.out.println("All minion objects:");
         manager.printDumpObject();
     }
 
