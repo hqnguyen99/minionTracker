@@ -1,3 +1,4 @@
+package cmpt213.minionTracker.myMain;
 
 import java.util.Scanner;
 

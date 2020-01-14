@@ -1,3 +1,5 @@
+package cmpt213.minionTracker.myMain;
+
 import java.util.ArrayList;
 import java.util.List;
 public class MinionManager {

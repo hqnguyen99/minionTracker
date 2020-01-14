@@ -1,3 +1,5 @@
+package cmpt213.minionTracker.myMain;
+
 public class Minion {
     private String name;
     private double height;
@@ -17,7 +19,7 @@ public class Minion {
     }
     @Override
     public String toString() {
-        return "Minion{" +
+        return "cmpt213.minionTracker.myMain.Minion{" +
                 "name=" + name +
                 ", height=" + height +
                 ", numberOfEvilDeedCompleted=" + numberOfEvilDeedCompleted +
