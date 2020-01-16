@@ -3,7 +3,8 @@ package cmpt213.minionTracker.myMain;
 import java.util.*;
 public class Main {
     public static void main(String[] args){
-        final Menu menuUI = new Menu();
+        MinionManager manager = new MinionManager();
+        final Menu menuUI = new Menu(manager);
         Scanner in = new Scanner(System.in);
 
         // Show greeting to program
@@ -12,6 +13,7 @@ public class Main {
         boolean isDone = false;
         while (!isDone) {
             menuUI.showMenu();
+            System.out.print("> ");
             int choice = in.nextInt();
             switch(choice) {
                 case 1 :
@@ -43,6 +45,10 @@ public class Main {
                     in.nextLine();
                     isDone = true;
                     break;
+                case 7 :
+                    System.out.println("Error: Please enter a selection between case 1 and 6");
+                    System.out.print(">");
+
             }
         }
     }

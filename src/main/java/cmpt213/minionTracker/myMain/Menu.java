@@ -3,8 +3,8 @@ package cmpt213.minionTracker.myMain;
 import java.util.Scanner;
 
 public class Menu {
-    MinionManager manager= new MinionManager();
-    Scanner in = new Scanner(System.in);
+    MinionManager manager;
+    private Scanner in = new Scanner(System.in);
     private String title= "Main Menu";
     private String welcomeLine= "Welcome to the Evil Minion Tracker (tm)\n" +
                                 "by Your Name Here.  ";
@@ -12,6 +12,11 @@ public class Menu {
     private String[] menuOptions=  {"List minions" , "Add a new minion",
                                     "Remove minion" , "Attribute an evil deed to a minion",
                                     "Debug dump of minion details", "Exit"};
+
+    public Menu(MinionManager manager) {
+        this.manager = manager;
+    }
+
     public void showWelcomeLine(){
         // Show welcome line
         printStarBorder(firstWelcomeLine);
@@ -43,9 +48,10 @@ public class Menu {
     }
 
     public void addMinion(){
-        System.out.println("Enter minion's name: ");
+        System.out.print("Enter minion's name: ");
+        Scanner in = new Scanner(System.in);
         String minionName = in.nextLine();
-        System.out.println("Enter minion's height: ");
+        System.out.print("Enter minion's height: ");
         Double minionHeight = in.nextDouble();
         in.nextLine();
         manager.add(new Minion(minionName,minionHeight ));
@@ -53,7 +59,7 @@ public class Menu {
 
     public void removeMinion(){
         listMinion();
-        System.out.println("Enter 0 to cancel");
+        System.out.print("Enter 0 to cancel");
         int selectMinionToRemove = in.nextInt();
         in.nextLine();
         if (selectMinionToRemove != 0){
